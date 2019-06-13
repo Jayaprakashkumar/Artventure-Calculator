@@ -1,0 +1,73 @@
+.floatLeft{
+    float: left;
+}
+.vat p:first-child{
+   margin-bottom: 13px;
+}
+.rateGraph{
+    border-bottom: 4px solid black;
+    position: relative;
+    width: 55%;
+    margin-left: 23%;
+}
+.point{
+    width: 10px;
+    height: 10px;
+background-color: #000;
+border-radius: 50%;
+color: transparent;
+position: absolute;
+top: 96%;
+margin-left: 10px;
+}
+.rate-container{
+    height: 40px;
+}
+.rate-container p{
+    float: left;
+
+}
+.rateinPer{
+    margin-left: 38%;
+}
+.thresholdVal{
+    margin-left: 30%;
+}
+.range-container{
+    width: 55%;
+    margin-left: 23%;
+    margin-top: 15px;
+}
+.range-container p{
+
+}
+.ratePer{
+ margin-left: 32px;
+}
+.rangePer{
+    margin-left: 35%;
+}
+.L0{
+left : 5%;
+}
+.L1{
+    left : 30%;
+}
+.L2{
+    left : 60%;
+}
+.L3{
+     left : 90%;
+ }
+ .L4{
+    left : 120%;
+}
+.m0{
+margin-left: 4px;
+}
+.m0{
+    margin-left: 4px;
+    }
+.m1,.m2,.m3,.m4,.m5{
+    margin-left: 38px;
+    }    

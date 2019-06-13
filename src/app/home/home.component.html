@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-6">
+    <h3 class="text-center">Auction Premium Calculator</h3>
+    <div class="form-group col-6 floatLeft">
+      <select id="Id" class="form-control" [(ngModel)]="auctionHammerValue" name="Id" (change)="acutionHammerChange();"
+        [value]="val">
+        <!-- <option value="Auctionhammer" selected="selected">Auction Hammer</option> -->
+        <option value="val" disabled>Auction Hammer</option>
+        <option [ngValue]="auction.Name" *ngFor="let auction of AuctionHouse">
+          {{auction.Name}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-6 floatLeft">
+      <select id="Id" class="form-control" [(ngModel)]="location" name="Id" (change)="locationChange();">
+        <!-- <option value="Location">Location</option> -->
+        <option value="" disabled>Location</option>
+        <option [ngValue]="k.City" *ngFor="let k of auctionCities">
+          {{k.City}}
+        </option>
+      </select>
+    </div>
+
+    <h5 class="text-center">Commission per guide</h5>
+    <div class="col-12">
+      <div class="rateGraph">
+        <p class="text-center" *ngIf="">Rate in %</p>
+        <div class="rate-container">
+            <p class="text-center rateinPer" *ngIf="israngeGraph">Rate in %</p>
+          <p *ngFor="let graph of graphArry">
+            <span *ngIf="!israngeGraph" class="ratePer">{{graph.rate}}</span>
+            <span *ngIf="!israngeGraph" class="point" [ngClass]="graph.leftClass">adsfa</span>
+     
+          </p>
+        </div>
+      </div>
+      <div class="rate-container range-container">
+        <p *ngIf="israngeGraph " class="text-center thresholdVal">Threshold range</p>
+        <p  *ngFor="let val of graphArry">
+          <span *ngIf="!israngeGraph" class="rangePer" [ngClass]="val.rangeClass">{{val.range}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group col-4 floatLeft">
+        <label for="hammerprice">Hammer Price</label>
+        <input type="text" class="form-control" id="hammerprice" [(ngModel)]="hammerprice"
+          (change)="changeHammerPrice()" placeholder="Hammer price">
+      </div>
+      <div class="col-4 vat text-center floatLeft">
+        <p>VAT</p>
+        <p>{{input}}</p>
+      </div>
+      <div class="form-group col-4 floatLeft">
+        <label for="totalPricePaid">Total Price Paid</label>
+        <input type="text" class="form-control" id="totalPricePaid" [(ngModel)]="pricepaid"
+          placeholder="Total price paid">
+      </div>
+    </div>
+
+  </div>
